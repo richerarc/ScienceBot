@@ -1,0 +1,417 @@
+/*
+ * Main stylesheet
+ */
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 100px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50pt;
+    color: white;
+    font-weight: bold;
+}
+
+h3 {
+    min-height: 60px;
+}
+
+.splash h3 {
+    color: white;
+}
+
+/* Bootstrap overrides */
+
+.navbar {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-nav li a{
+    padding-top: 35px;
+    color: white;
+    font-size: 14pt;
+}
+
+.navbar-default .navbar-nav li a:hover{
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.navbar-default .navbar-nav li a:visited{
+    color: white;
+}
+
+
+.navbar-brand {
+
+    height: 100px;
+}
+
+.navbar img {
+    display: inline-block;
+}
+
+.navbar-nav {
+    font-weight: bold;
+}
+
+/* Header */
+
+header {
+    z-index: 1;
+}
+
+#logo-title {
+    font-size: 40px;
+
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+
+    color: white;
+}
+
+#logo-image {
+    height: 64px;
+    width: 64px;
+
+    display: inline-block;
+    line-height: 64px;
+    vertical-align: middle;
+}
+
+/* Splash */
+
+#background {
+    position: absolute;
+    top:0;
+    z-index: -1;
+    background: url("/img/wallpaper.jpg") no-repeat top;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+#slack-logo {
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 15pt;
+    background-color: rgb(114,202,219);
+    color: white;
+
+    transition: all .2s ease-in-out;
+}
+
+#slack-logo img {
+    height: 32px;
+    width: 32px;
+    margin-right: 5px;
+}
+
+#slack-logo:hover {
+    transform: scale(1.1);
+    background-color: rgb(93, 168, 185);
+}
+
+#typed-message {
+    font-weight: bold;
+    font-size: 22pt;
+}
+
+/* Blinking cursor */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* Window */
+
+.window {
+    height: 450px;
+    position: relative;
+    top: 100px;
+    text-align: center;
+
+}
+
+.window .header .button-circle {
+    margin-left: 5px;
+    float: left;
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    padding: 5px;
+    background-color: rgb(114,202,219);
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.window .header .button-circle:hover {
+    background-color: rgba(114, 202, 219, 0.54);
+    cursor: default;
+}
+
+.window .header {
+    position: relative;
+    top:2px;
+    padding-left: 3px;
+    margin: 0 auto;
+    height:25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(51, 51, 51);
+    width: 500px;
+}
+
+.window img {
+    height: 297px;
+    width: 500px;
+}
+
+/* Splash */
+
+#article-splash {
+    font-size: 15pt;
+    text-align: justify;
+}
+
+.command {
+    display: inline;
+    margin-top: 30px;
+    padding: 9px;
+    border: solid #a0a0a0 2px;
+    border-left: none;
+    position: relative;
+    top:-2px;
+    width:610px;
+    left: -6px;
+
+}
+
+.plus-part {
+    display: inline;
+    border: solid #a0a0a0 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:7px;
+    padding-bottom:7px;
+    color: #a0a0a0;
+    font-size: 20pt;
+
+    transition: background-color 0.25s, color 0.25s, border;
+}
+
+.try-part {
+    position: relative;
+    top: -2px;
+    left: -11px;
+
+    display: inline;
+    border: solid #a0a0a0 2px;
+    border-left: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:11px;
+    padding-bottom:11px;
+    color: #a0a0a0;
+    font-size: 15pt;
+
+    transition: background-color 0.25s, color 0.25s, border;
+}
+
+.plus-part:hover, .try-part:hover {
+    background-color: rgb(114,202,219);
+    color: white;
+    border: solid rgb(114,202,219) 2px;
+}
+
+.try-part:hover {
+    position: relative;
+    left:-2px;
+    left: -13px;
+}
+
+.demo-command {
+    margin-top:40px;
+}
+
+/****************/
+/* Page pricing */
+/****************/
+
+#background-other {
+    position: absolute;
+    top:0;
+    z-index: -1;
+    background: url("/img/wallpaper.jpg") no-repeat top;
+    background-size: cover;
+    height: 95px;
+    width: 100%;
+}
+
+.pricing-header {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+
+    color:white;
+}
+
+.pricing-description {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 130px;
+    font-size: 12pt;
+    color: white;
+}
+
+.pricing-price {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 50pt;
+    color: white;
+}
+
+.pricing-choice {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+.pricing-free .pricing-choice:hover {
+    background-color: #c6bbdd;
+    width: 100%;
+}
+
+.pricing-regular .pricing-choice:hover {
+    background-color: #a3dbc8;
+    width: 100%;
+}
+
+.pricing-ultimate .pricing-choice:hover {
+    background-color: #90c7ee;
+    width: 100%;
+}
+
+
+.pricing-feature {
+    text-align: center;
+    min-height: 60px;
+}
+
+.pricing-choice a {
+    color: white;
+    font-size: 15pt;
+}
+
+.pricing-free {
+    padding: 0;
+    width: 300px;
+    background-color: #8a74b9;
+    cursor: pointer;
+    color: white;
+}
+
+.pricing-choice a:hover {
+    color: white;
+    font-size: 15pt;
+}
+
+.pricing-regular {
+    padding: 0;
+    width: 300px;
+    background-color: #4cb992;
+    cursor: pointer;
+    color: white;
+
+    -webkit-box-shadow: -1px 3px 29px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 29px 5px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 29px 5px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+.pricing-ultimate {
+    padding: 0;
+    width: 300px;
+    background-color: #3499e0;
+    cursor: pointer;
+    color: white;
+}
+
+#pricing-guide {
+    text-align: center;
+    font-size: 30pt;
+}
+
+#pricing-heading {
+    font-size: 14pt;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+#suppport-guide {
+    text-align: center;
+    font-size: 30pt;
+}
+
+/****************/
+/* Page support */
+/****************/
+
+#faq-area {
+    margin-top: 20px;
+    font-size: 20pt;
+    display: block;
+    line-height: 30px;
+}
+
+#documentation-heading {
+    text-align: center;
+    font-size: 30pt;
+}
+
+.doc-command {
+    margin-top: 30px;
+
+}
+
+.doc-command p {
+    margin-top: 10px;
+}
